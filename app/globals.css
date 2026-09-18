@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Poppins", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+  overflow-x: hidden;
+}
+
+/* ---------- Reusable component classes ---------- */
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-bold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply btn bg-moma-blue text-moma-gold shadow-card hover:bg-moma-blue-dark hover:-translate-y-0.5;
+}
+
+.btn-gold {
+  @apply btn bg-moma-gold text-moma-navy shadow-gold hover:bg-moma-gold-light hover:-translate-y-0.5;
+}
+
+.btn-outline {
+  @apply btn border-2 border-moma-blue text-moma-blue bg-white hover:bg-moma-blue hover:text-moma-gold;
+}
+
+.btn-danger {
+  @apply btn bg-red-600 text-white hover:bg-red-700;
+}
+
+.btn-secondary {
+  @apply btn bg-slate-200 text-slate-700 hover:bg-slate-300;
+}
+
+.card {
+  @apply rounded-2xl bg-white shadow-card;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-800 outline-none transition focus:border-moma-blue focus:ring-2 focus:ring-moma-blue/30;
+}
+
+.label {
+  @apply mb-1.5 block text-sm font-bold text-moma-navy;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold;
+}
+
+.badge-gold {
+  @apply badge bg-moma-gold text-moma-navy;
+}
+
+.badge-blue {
+  @apply badge bg-moma-blue text-white;
+}
+
+.badge-green {
+  @apply badge bg-emerald-100 text-emerald-700;
+}
+
+.badge-red {
+  @apply badge bg-red-100 text-red-700;
+}
+
+.alert {
+  @apply rounded-xl border px-4 py-3 text-sm font-semibold;
+}
+
+.alert-success {
+  @apply alert border-emerald-300 bg-emerald-50 text-emerald-800;
+}
+
+.alert-error {
+  @apply alert border-red-300 bg-red-50 text-red-800;
+}
+
+.alert-info {
+  @apply alert border-blue-300 bg-blue-50 text-blue-800;
+}
+
+.alert-warning {
+  @apply alert border-amber-300 bg-amber-50 text-amber-800;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}
