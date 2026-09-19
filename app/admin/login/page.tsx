@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { AuthPageHeader } from "@/components/AuthPageHeader";
 import { AlertBox } from "@/components/AlertBox";
 import { Footer } from "@/components/Footer";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -67,9 +68,7 @@ export default function AdminLoginPage() {
 
               <div>
                 <label className="label">Password</label>
-                <input
-                  type="password"
-                  className="input"
+                <PasswordInput
                   required
                   placeholder="Enter password"
                   value={password}
