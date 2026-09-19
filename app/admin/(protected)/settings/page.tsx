@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AlertBox } from "@/components/AlertBox";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export default function SettingsPage() {
   const [password, setPassword] = useState("");
@@ -60,9 +61,7 @@ export default function SettingsPage() {
           <form onSubmit={handlePasswordUpdate} className="space-y-4">
             <div>
               <label className="label">New Password</label>
-              <input
-                type="password"
-                className="input"
+              <PasswordInput
                 required
                 minLength={6}
                 value={password}
