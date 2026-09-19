@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Plus, FileUp, Trash2 } from "lucide-react";
 import { Modal } from "@/components/Modal";
 import { AlertBox } from "@/components/AlertBox";
+import { PasswordInput } from "@/components/PasswordInput";
 import type { Student } from "@/lib/types";
 
 export default function StudentsPage() {
@@ -185,9 +186,7 @@ export default function StudentsPage() {
           </div>
           <div>
             <label className="label">Password</label>
-            <input
-              type="password"
-              className="input"
+            <PasswordInput
               required
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
